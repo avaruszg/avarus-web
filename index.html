@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AVARUS d.o.o. – stručna podrška u pripremi, organizaciji i provedbi građevinskih projekata.">
+  <meta name="theme-color" content="#3f78a7">
+  <title>AVARUS d.o.o. | Od ideje do realizacije</title>
+  <style>
+    :root {
+      --blue: #3f78a7;
+      --blue-dark: #173b59;
+      --ink: #202b35;
+      --muted: #65727d;
+      --pale: #f2f6f9;
+      --line: #e1e8ee;
+      --white: #fff;
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); font-family: Arial, Helvetica, sans-serif; line-height: 1.65; background: var(--white); }
+    a { color: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 44px)); margin: 0 auto; }
+    header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 5; }
+    .nav { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand img { display: block; width: 255px; max-width: 42vw; height: auto; }
+    nav { display: flex; gap: 28px; align-items: center; }
+    nav a { text-decoration: none; font-size: 14px; font-weight: 700; color: #34495a; }
+    nav a:hover { color: var(--blue); }
+    .nav-contact { color: var(--blue); border: 1px solid var(--blue); padding: 10px 16px; border-radius: 3px; }
+    .hero { position: relative; overflow: hidden; background: linear-gradient(115deg, #102f49 0%, #1d4b70 58%, #3f78a7 100%); color: white; }
+    .hero:before, .hero:after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.16); transform: rotate(38deg); }
+    .hero:before { width: 440px; height: 440px; right: 5%; top: -180px; }
+    .hero:after { width: 270px; height: 270px; right: 18%; bottom: -190px; }
+    .hero-inner { position: relative; z-index: 1; padding: 105px 0 112px; max-width: 760px; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .19em; font-size: 12px; font-weight: 700; color: #c7dced; }
+    h1 { font-size: clamp(38px, 6vw, 68px); line-height: 1.08; margin: 18px 0 22px; letter-spacing: -.035em; }
+    .hero p { max-width: 650px; font-size: 19px; color: #e6eff6; margin: 0 0 32px; }
+    .button { display: inline-block; background: white; color: var(--blue-dark); text-decoration: none; padding: 14px 22px; font-size: 14px; font-weight: 700; border-radius: 3px; }
+    .button:hover { background: #eaf2f8; }
+    section { padding: 82px 0; }
+    .section-head { max-width: 700px; margin-bottom: 38px; }
+    .section-kicker { color: var(--blue); font-size: 12px; text-transform: uppercase; letter-spacing: .17em; font-weight: 700; }
+    h2 { font-size: clamp(30px, 4vw, 43px); line-height: 1.15; letter-spacing: -.025em; margin: 12px 0 16px; color: var(--blue-dark); }
+    .lead { font-size: 18px; color: var(--muted); margin: 0; }
+    .about-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 65px; align-items: center; }
+    .about-note { background: var(--pale); padding: 34px; border-left: 4px solid var(--blue); }
+    .about-note strong { display: block; color: var(--blue-dark); font-size: 20px; margin-bottom: 10px; }
+    .services { background: var(--pale); }
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .service { background: white; padding: 27px 25px; border: 1px solid var(--line); min-height: 190px; }
+    .service .num { color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: .12em; }
+    .service h3 { color: var(--blue-dark); margin: 15px 0 9px; font-size: 19px; }
+    .service p { color: var(--muted); font-size: 14px; margin: 0; }
+    .partners { text-align: center; }
+    .partners .section-head { margin-left: auto; margin-right: auto; }
+    .partner-placeholder { border: 1px dashed #b9c9d6; background: #fbfcfd; color: #758492; padding: 34px 20px; max-width: 780px; margin: 0 auto; font-size: 14px; }
+    .contact { background: #f3f6f8; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+    .contact-list { display: grid; gap: 18px; }
+    .contact-item { background: white; border: 1px solid var(--line); padding: 19px 22px; }
+    .contact-item small { display: block; color: var(--muted); text-transform: uppercase; letter-spacing: .12em; font-size: 11px; font-weight: 700; }
+    .contact-item a, .contact-item span { display: inline-block; margin-top: 5px; color: var(--blue-dark); text-decoration: none; font-weight: 700; font-size: 17px; }
+    footer { background: #132f46; color: #d9e4ec; padding: 28px 0; font-size: 13px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    footer a { color: white; text-decoration: none; }
+    @media (max-width: 800px) {
+      .nav { align-items: flex-start; flex-direction: column; padding: 16px 0; gap: 14px; }
+      nav { width: 100%; flex-wrap: wrap; gap: 14px 20px; }
+      .brand img { width: 220px; max-width: 70vw; }
+      .hero-inner { padding: 78px 0 84px; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+      section { padding: 64px 0; }
+    }
+    @media (max-width: 520px) {
+      .wrap { width: min(var(--max), calc(100% - 32px)); }
+      nav a { font-size: 13px; }
+      .service-grid { grid-template-columns: 1fr; }
+      .hero p { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#pocetna" aria-label="AVARUS početna">
+      <img src="avarus-logo.png" alt="AVARUS d.o.o.">
+    </a>
+    <nav aria-label="Glavna navigacija">
+      <a href="#o-nama">O nama</a>
+      <a href="#usluge">Usluge</a>
+      <a href="#partneri">Partneri</a>
+      <a class="nav-contact" href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="pocetna">
+    <div class="wrap hero-inner">
+      <div class="eyebrow">AVARUS d.o.o. · Zagreb</div>
+      <h1>Stručnost koja<br>pokreće projekte.</h1>
+      <p>Podrška u pripremi, organizaciji i provedbi građevinskih projekata – od prvih koraka do kvalitetne realizacije.</p>
+      <a class="button" href="#usluge">Upoznajte naše usluge</a>
+    </div>
+  </section>
+
+  <section id="o-nama">
+    <div class="wrap about-grid">
+      <div>
+        <div class="section-kicker">O nama</div>
+        <h2>Pouzdan partner u realizaciji projekata.</h2>
+        <p class="lead">AVARUS d.o.o. pruža stručnu podršku u području građevinskih projekata, s naglaskom na kvalitetnu pripremu, koordinaciju sudionika i odgovorno upravljanje procesima.</p>
+      </div>
+      <div class="about-note">
+        <strong>Od ideje do realizacije.</strong>
+        Svakom projektu pristupamo organizirano i odgovorno, uz povezivanje stručnih znanja, jasnu komunikaciju i usmjerenost na ciljeve investitora.
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="usluge">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-kicker">Što radimo</div>
+        <h2>Naše usluge</h2>
+        <p class="lead">Stručna podrška prilagođena potrebama projekta i investitora.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service">
+          <div class="num">01 / UPRAVLJANJE</div>
+          <h3>Upravljanje projektima</h3>
+          <p>Planiranje, koordinacija i praćenje projektnih aktivnosti i sudionika.</p>
+        </article>
+        <article class="service">
+          <div class="num">02 / OBNOVA</div>
+          <h3>Obnova građevina</h3>
+          <p>Stručna podrška u pripremi i provedbi projekata obnove objekata.</p>
+        </article>
+        <article class="service">
+          <div class="num">03 / GEODEZIJA</div>
+          <h3>Geodetske usluge</h3>
+          <p>Geodetska podrška kao dio pripreme i realizacije građevinskih zahvata.</p>
+        </article>
+        <article class="service">
+          <div class="num">04 / GEOMEHANIKA</div>
+          <h3>Geomehanička ispitivanja</h3>
+          <p>Stručne podloge i ispitivanja za potrebe planiranja i projektiranja.</p>
+        </article>
+        <article class="service">
+          <div class="num">05 / GRAĐENJE</div>
+          <h3>Građevinski radovi</h3>
+          <p>Koordinacija i podrška u provedbi građevinskih i konstrukcijskih radova.</p>
+        </article>
+        <article class="service">
+          <div class="num">06 / NADZOR</div>
+          <h3>Stručni nadzor</h3>
+          <p>Praćenje izvođenja radova i usklađenosti s projektnom dokumentacijom.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners" id="partneri">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-kicker">Suradnja</div>
+        <h2>Naši partneri</h2>
+        <p class="lead">Surađujemo s pouzdanim tvrtkama i stručnjacima kako bismo odgovorili na zahtjeve svakog projekta.</p>
+      </div>
+      <div class="partner-placeholder">Ovdje ćemo dodati logotipe suradničkih tvrtki.</div>
+    </div>
+  </section>
+
+  <section class="contact" id="kontakt">
+    <div class="wrap contact-grid">
+      <div>
+        <div class="section-kicker">Javite nam se</div>
+        <h2>Razgovarajmo o vašem projektu.</h2>
+        <p class="lead">Za dodatne informacije i poslovne upite slobodno nas kontaktirajte.</p>
+      </div>
+      <div class="contact-list">
+        <div class="contact-item">
+          <small>Telefon</small>
+          <a href="tel:+385995370006">+385 99 5370 006</a>
+        </div>
+        <div class="contact-item">
+          <small>E-mail</small>
+          <a href="mailto:info.avaruszg@gmail.com">info.avaruszg@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <small>Adresa</small>
+          <span>Radnička cesta 1, 10000 Zagreb</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>© <span id="year">2026</span> AVARUS d.o.o. Sva prava pridržana.</span>
+    <a href="#pocetna">Povratak na vrh ↑</a>
+  </div>
+</footer>
+</body>
+</html>
