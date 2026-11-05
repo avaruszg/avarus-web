@@ -14,10 +14,20 @@ header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid 
 section{padding:82px 0}.kicker{color:var(--blue)}h2{font-size:clamp(30px,4vw,43px);line-height:1.14;letter-spacing:-.025em;color:var(--navy);margin:12px 0 16px}.lead{font-size:18px;color:var(--muted);margin:0}.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:62px;align-items:center}.statement{background:var(--pale);padding:34px;border-left:4px solid var(--blue)}.statement strong{display:block;font-size:21px;color:var(--navy);margin-bottom:9px}.statement p{margin:0;color:var(--muted)}
 .services{background:var(--pale)}.section-head{max-width:760px;margin-bottom:38px}.service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.service{background:white;border:1px solid var(--line);padding:30px;min-height:205px}.service .num{font-size:12px;letter-spacing:.13em;color:var(--blue);font-weight:700}.service h3{font-size:21px;color:var(--navy);margin:13px 0 9px}.service p{font-size:15px;color:var(--muted);margin:0}
 .partner-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.partner-panel{background:var(--navy);color:white;padding:38px}.partner-panel h3{font-size:24px;margin:0 0 12px}.partner-panel p{color:#dce8f0;margin:0}.partner-types{display:grid;grid-template-columns:1fr 1fr;gap:12px}.partner-type{border:1px solid var(--line);padding:18px;color:var(--navy);font-weight:700;background:#fff}
-.partners-logos{margin-top:36px;padding:28px;border:1px dashed #b9c9d6;text-align:center;color:#758492;background:#fbfcfd;font-size:14px}
+.partners-logos{margin-top:36px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;align-items:center}
+.partner-logo{margin:0;min-height:142px;padding:22px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;cursor:zoom-in;transition:border-color .2s,transform .2s}
+.partner-logo:hover{border-color:var(--blue);transform:translateY(-2px)}
+.partner-logo img{display:block;width:100%;height:96px;object-fit:contain}
+.logo-lightbox{display:none;position:fixed;inset:0;z-index:1000;background:rgba(10,25,38,.88);align-items:center;justify-content:center;padding:32px}
+.logo-lightbox.open{display:flex}
+.logo-lightbox img{max-width:min(90vw,1000px);max-height:86vh;object-fit:contain;background:#fff;padding:24px;border-radius:4px}
+.logo-lightbox button{position:absolute;top:20px;right:26px;border:0;background:transparent;color:#fff;font-size:38px;cursor:pointer;line-height:1}
 .contact{background:var(--pale)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:start}.contact-list{display:grid;gap:15px}.contact-item{background:#fff;border:1px solid var(--line);padding:18px 22px}.contact-item small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:700}.contact-item a,.contact-item span{display:inline-block;margin-top:5px;text-decoration:none;color:var(--navy);font-size:17px;font-weight:700}
 footer{background:#132f46;color:#d9e4ec;padding:27px 0;font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}footer a{color:white;text-decoration:none}
 @media(max-width:800px){
+.partners-logos{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.partner-logo{min-height:120px;padding:16px}
+.partner-logo img{height:82px}
 .nav{align-items:center;flex-direction:column;padding:14px 0 12px;gap:12px}
 nav{width:100%;justify-content:center;flex-wrap:wrap;gap:8px 18px}
 .brand img{width:220px;max-width:70vw}
@@ -28,6 +38,9 @@ nav{width:100%;justify-content:center;flex-wrap:wrap;gap:8px 18px}
 section{padding:64px 0}
 }
 @media(max-width:520px){
+.partners-logos{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.partner-logo{min-height:104px;padding:12px}
+.partner-logo img{height:76px}
 .wrap{width:calc(100% - 32px)}
 .nav{gap:10px}
 nav{gap:6px 8px}
@@ -80,7 +93,25 @@ section{padding:52px 0}
 <div class="partner-types">
 <div class="partner-type">Projektanti i tehnički stručnjaci</div><div class="partner-type">EU konzultanti</div><div class="partner-type">Izvođači radova</div><div class="partner-type">Stručni nadzor</div><div class="partner-type">Geodeti i geomehaničari</div><div class="partner-type">Proizvođači i dobavljači</div>
 </div></div>
-<div class="partners-logos">Ovdje ćemo dodati logotipe suradničkih tvrtki.</div>
+<div class="partners-logos" aria-label="Logotipi stručnih partnera">
+<button class="partner-logo" type="button" aria-label="Povećaj logotip partnera 1" data-logo="logo-01.png"><img src="logo-01.png" alt="Logotip partnera 1" loading="lazy"></button>
+<button class="partner-logo" type="button" aria-label="Povećaj logotip partnera 2" data-logo="logo-02.png"><img src="logo-02.png" alt="Logotip partnera 2" loading="lazy"></button>
+<button class="partner-logo" type="button" aria-label="Povećaj logotip partnera 3" data-logo="logo-03.png"><img src="logo-03.png" alt="Logotip partnera 3" loading="lazy"></button>
+<button class="partner-logo" type="button" aria-label="Povećaj logotip partnera 4" data-logo="logo-04.png"><img src="logo-04.png" alt="Logotip partnera 4" loading="lazy"></button>
+<button class="partner-logo" type="button" aria-label="Povećaj logotip partnera 5" data-logo="logo-05.png"><img src="logo-05.png" alt="Logotip partnera 5" loading="lazy"></button>
+<button class="partner-logo" type="button" aria-label="Povećaj logotip partnera 6" data-logo="logo-06.png"><img src="logo-06.png" alt="Logotip partnera 6" loading="lazy"></button>
+<button class="partner-logo" type="button" aria-label="Povećaj logotip partnera 7" data-logo="logo-07.png"><img src="logo-07.png" alt="Logotip partnera 7" loading="lazy"></button>
+<button class="partner-logo" type="button" aria-label="Povećaj logotip partnera 8" data-logo="logo-08.png"><img src="logo-08.png" alt="Logotip partnera 8" loading="lazy"></button>
+<button class="partner-logo" type="button" aria-label="Povećaj logotip partnera 9" data-logo="logo-09.png"><img src="logo-09.png" alt="Logotip partnera 9" loading="lazy"></button>
+<button class="partner-logo" type="button" aria-label="Povećaj logotip partnera 10" data-logo="logo-10.jpg"><img src="logo-10.jpg" alt="Logotip partnera 10" loading="lazy"></button>
+<button class="partner-logo" type="button" aria-label="Povećaj logotip partnera 11" data-logo="logo-11.png"><img src="logo-11.png" alt="Logotip partnera 11" loading="lazy"></button>
+<button class="partner-logo" type="button" aria-label="Povećaj logotip partnera 12" data-logo="logo-12.png"><img src="logo-12.png" alt="Logotip partnera 12" loading="lazy"></button>
+<button class="partner-logo" type="button" aria-label="Povećaj logotip partnera 13" data-logo="logo-13.png"><img src="logo-13.png" alt="Logotip partnera 13" loading="lazy"></button>
+<button class="partner-logo" type="button" aria-label="Povećaj logotip partnera 14" data-logo="logo-14.png"><img src="logo-14.png" alt="Logotip partnera 14" loading="lazy"></button>
+<button class="partner-logo" type="button" aria-label="Povećaj logotip partnera 15" data-logo="logo-15.png"><img src="logo-15.png" alt="Logotip partnera 15" loading="lazy"></button>
+<button class="partner-logo" type="button" aria-label="Povećaj logotip partnera 16" data-logo="logo-16.png"><img src="logo-16.png" alt="Logotip partnera 16" loading="lazy"></button>
+<button class="partner-logo" type="button" aria-label="Povećaj logotip partnera 17" data-logo="logo-17.png"><img src="logo-17.png" alt="Logotip partnera 17" loading="lazy"></button>
+</div>
 </div></section>
 <section class="contact" id="kontakt"><div class="wrap contact-grid">
 <div><div class="kicker">Javite nam se</div><h2>Razgovarajmo o vašem projektu.</h2><p class="lead">Za dodatne informacije i poslovne upite slobodno nas kontaktirajte.</p></div>
@@ -91,4 +122,13 @@ section{padding:52px 0}
 </div></div></section>
 </main>
 <footer><div class="wrap footer-inner"><span>© 2026 AVARUS d.o.o. Sva prava pridržana.</span><a href="#pocetna">Povratak na vrh ↑</a></div></footer>
+
+<div class="logo-lightbox" id="logo-lightbox" role="dialog" aria-modal="true" aria-label="Uvećani logotip" onclick="if(event.target===this)closeLogo()">
+<button type="button" aria-label="Zatvori" onclick="closeLogo()">&times;</button><img id="logo-lightbox-image" src="" alt="Uvećani logotip partnera">
+</div>
+<script>
+function closeLogo(){document.getElementById('logo-lightbox').classList.remove('open');document.body.style.overflow=''}
+document.querySelectorAll('.partner-logo').forEach(function(item){item.addEventListener('click',function(){var image=document.getElementById('logo-lightbox-image');image.src=this.dataset.logo;document.getElementById('logo-lightbox').classList.add('open');document.body.style.overflow='hidden'})});
+document.addEventListener('keydown',function(event){if(event.key==='Escape')closeLogo()});
+</script>
 </body></html>
