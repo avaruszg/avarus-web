@@ -60,12 +60,34 @@ section{padding:52px 0}
 .contact-item a,.contact-item span{font-size:16px;overflow-wrap:anywhere}
 .footer-inner{flex-direction:column;gap:8px}
 }
+
+.projects{background:var(--pale)}
+.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:34px}
+.project-card{display:block;width:100%;padding:0;text-align:left;border:1px solid var(--line);background:#fff;color:inherit;cursor:zoom-in;transition:transform .2s,border-color .2s}
+.project-card:hover{transform:translateY(-3px);border-color:var(--blue)}
+.project-card img{display:block;width:100%;height:220px;object-fit:cover;background:#e8eef2}
+.project-card-copy{padding:18px 20px 20px}
+.project-card h3{font-size:19px;line-height:1.3;color:var(--navy);margin:0 0 6px}
+.project-card p{font-size:14px;color:var(--muted);margin:0}
+.project-lightbox{display:none;position:fixed;inset:0;z-index:1100;background:rgba(10,25,38,.94);align-items:center;justify-content:center;padding:60px 76px 38px}
+.project-lightbox.open{display:flex}
+.project-lightbox figure{margin:0;max-width:min(1100px,90vw);width:100%;text-align:center}
+.project-lightbox figure img{display:block;max-width:100%;max-height:76vh;width:auto;height:auto;object-fit:contain;margin:0 auto;background:#fff}
+.project-lightbox figcaption{color:#fff;margin-top:14px;font-size:14px}
+.project-lightbox button{position:absolute;border:0;background:transparent;color:#fff;cursor:pointer}
+.project-lightbox .project-close{top:14px;right:24px;font-size:40px;line-height:1}
+.project-lightbox .project-prev,.project-lightbox .project-next{top:50%;transform:translateY(-50%);font-size:48px;padding:12px}
+.project-lightbox .project-prev{left:12px}.project-lightbox .project-next{right:12px}
+.project-lightbox button:focus-visible,.project-card:focus-visible{outline:3px solid #8fc7f0;outline-offset:3px}
+@media(max-width:800px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.project-card img{height:190px}}
+@media(max-width:520px){.project-grid{grid-template-columns:1fr;gap:14px}.project-card img{height:210px}.project-lightbox{padding:58px 16px 28px}.project-lightbox .project-prev{left:0}.project-lightbox .project-next{right:0}.project-lightbox .project-prev,.project-lightbox .project-next{font-size:38px}}
+
 </style>
 </head>
 <body>
 <header><div class="wrap nav">
 <a class="brand" href="#pocetna" aria-label="AVARUS početna"><img src="avarus-logo.png" alt="AVARUS d.o.o."></a>
-<nav aria-label="Glavna navigacija"><a href="#o-nama">O nama</a><a href="#usluge">Usluge</a><a href="#partneri">Partneri</a><a class="nav-contact" href="#kontakt">Kontakt</a></nav>
+<nav aria-label="Glavna navigacija"><a href="#o-nama">O nama</a><a href="#usluge">Usluge</a><a href="#partneri">Partneri</a><a href="#projekti">Projekti</a><a class="nav-contact" href="#kontakt">Kontakt</a></nav>
 </div></header>
 <main>
 <section class="hero" id="pocetna"><div class="wrap hero-inner">
@@ -113,6 +135,17 @@ section{padding:52px 0}
 <button class="partner-logo" type="button" aria-label="Povećaj logotip partnera 17" data-logo="logo-17.png"><img src="logo-17.png" alt="Logotip partnera 17" loading="lazy"></button>
 </div>
 </div></section>
+
+<section class="projects" id="projekti"><div class="wrap">
+<div class="section-head"><div class="kicker">Reference</div><h2>Odabrani projekti</h2><p class="lead">Koordiniramo obnovu i povezujemo sve sudionike projekta – od planiranja do realizacije.</p></div>
+<div class="project-grid">
+<button class="project-card" type="button" data-project="argentinska"><img src="images/argentinska-01.jpg" alt="Radovi na projektu u Argentinskoj ulici" loading="lazy"><span class="project-card-copy"><h3>Argentinska ulica 2 i 4, Zagreb</h3><p>Energetska obnova stambeno-poslovne zgrade</p></span></button>
+<button class="project-card" type="button" data-project="zapresic"><img src="images/zapresic-01.jpg" alt="Radovi na projektu u Zaprešiću" loading="lazy"><span class="project-card-copy"><h3>Zaprešić</h3><p>Energetska obnova višestambenih zgrada</p></span></button>
+<button class="project-card" type="button" data-project="buconjiceva"><img src="images/buconjiceva-01.jpg" alt="Radovi na zgradi u Buconjićevoj ulici" loading="lazy"><span class="project-card-copy"><h3>Buconjićeva 19, Zagreb</h3><p>Obnova zgrade</p></span></button>
+<button class="project-card" type="button" data-project="amruseva"><img src="images/amruseva-01.jpg" alt="Radovi na projektu u Amruševoj ulici" loading="lazy"><span class="project-card-copy"><h3>Amruševa, Zagreb</h3><p>Obnova zgrade</p></span></button>
+<button class="project-card" type="button" data-project="markusevec"><img src="images/markusevec-01.jpg" alt="Radovi na obiteljskim kućama u Markuševcu" loading="lazy"><span class="project-card-copy"><h3>Markuševec</h3><p>Strukturna samoobnova obiteljskih kuća</p></span></button>
+</div></div></section>
+
 <section class="contact" id="kontakt"><div class="wrap contact-grid">
 <div><div class="kicker">Javite nam se</div><h2>Razgovarajmo o vašem projektu.</h2><p class="lead">Za dodatne informacije i poslovne upite slobodno nas kontaktirajte.</p></div>
 <div class="contact-list">
@@ -123,10 +156,65 @@ section{padding:52px 0}
 </main>
 <footer><div class="wrap footer-inner"><span>© 2026 AVARUS d.o.o. Sva prava pridržana.</span><a href="#pocetna">Povratak na vrh ↑</a></div></footer>
 
+
+<div class="project-lightbox" id="project-lightbox" role="dialog" aria-modal="true" aria-label="Fotografije projekta">
+<button class="project-close" type="button" aria-label="Zatvori" onclick="closeProject()">&times;</button>
+<button class="project-prev" type="button" aria-label="Prethodna fotografija" onclick="changeProjectPhoto(-1)">&#8249;</button>
+<figure><img id="project-lightbox-image" src="" alt=""><figcaption id="project-lightbox-caption"></figcaption></figure>
+<button class="project-next" type="button" aria-label="Sljedeća fotografija" onclick="changeProjectPhoto(1)">&#8250;</button>
+</div>
+
 <div class="logo-lightbox" id="logo-lightbox" role="dialog" aria-modal="true" aria-label="Uvećani logotip" onclick="if(event.target===this)closeLogo()">
 <button type="button" aria-label="Zatvori" onclick="closeLogo()">&times;</button><img id="logo-lightbox-image" src="" alt="Uvećani logotip partnera">
 </div>
 <script>
+
+var projectGalleries={
+argentinska:["images/argentinska-01.jpg","images/argentinska-02.jpg"],
+zapresic:["images/zapresic-01.jpg","images/zapresic-02.jpg","images/zapresic-03.jpg","images/zapresic-04.jpg","images/zapresic-05.jpg"],
+buconjiceva:["images/buconjiceva-01.jpg","images/buconjiceva-02.jpg"],
+amruseva:["images/amruseva-01.jpg","images/amruseva-02.jpg"],
+markusevec:["images/markusevec-01.jpg"],
+};
+var activeProject="",activeProjectIndex=0;
+function showProjectPhoto(){
+var files=projectGalleries[activeProject]||[];
+var image=document.getElementById("project-lightbox-image");
+image.src=files[activeProjectIndex];
+image.alt="Fotografija projekta";
+document.getElementById("project-lightbox-caption").textContent=(activeProjectIndex+1)+" / "+files.length;
+var modal=document.getElementById("project-lightbox");
+modal.querySelector(".project-prev").style.display=files.length>1?"block":"none";
+modal.querySelector(".project-next").style.display=files.length>1?"block":"none";
+}
+function openProject(id){
+activeProject=id;activeProjectIndex=0;showProjectPhoto();
+document.getElementById("project-lightbox").classList.add("open");
+document.body.style.overflow="hidden";
+}
+function closeProject(){
+document.getElementById("project-lightbox").classList.remove("open");
+document.getElementById("project-lightbox-image").src="";
+document.body.style.overflow="";
+}
+function changeProjectPhoto(step){
+var files=projectGalleries[activeProject]||[];
+if(files.length<2)return;
+activeProjectIndex=(activeProjectIndex+step+files.length)%files.length;showProjectPhoto();
+}
+document.querySelectorAll(".project-card").forEach(function(card){
+card.addEventListener("click",function(){openProject(this.dataset.project)});
+});
+document.getElementById("project-lightbox").addEventListener("click",function(event){
+if(event.target===this)closeProject();
+});
+document.addEventListener("keydown",function(event){
+if(!document.getElementById("project-lightbox").classList.contains("open"))return;
+if(event.key==="Escape")closeProject();
+if(event.key==="ArrowLeft")changeProjectPhoto(-1);
+if(event.key==="ArrowRight")changeProjectPhoto(1);
+});
+
 function closeLogo(){document.getElementById('logo-lightbox').classList.remove('open');document.body.style.overflow=''}
 document.querySelectorAll('.partner-logo').forEach(function(item){item.addEventListener('click',function(){var image=document.getElementById('logo-lightbox-image');image.src=this.dataset.logo;document.getElementById('logo-lightbox').classList.add('open');document.body.style.overflow='hidden'})});
 document.addEventListener('keydown',function(event){if(event.key==='Escape')closeLogo()});
