@@ -39,6 +39,17 @@ footer{background:#132f46;color:#d9e4ec;padding:24px 0;font-size:13px}.foot{disp
 
 @media(max-width:760px){.two-col{grid-template-columns:1fr;gap:25px}.steps{grid-template-columns:1fr}.grid{grid-template-columns:1fr}section{padding:56px 0}.hero-inner{padding:65px 0 72px}.hero p{font-size:17px}.nav{min-height:72px}.brand img{width:190px}}
 @media(max-width:520px){.wrap{width:calc(100% - 32px)}.nav{gap:12px}.brand img{width:155px}.back{font-size:12px}.hero h1{font-size:37px}.note,.item{padding:22px}}
+
+/* Consistent interactive feedback across AVARUS SEO pages */
+a, button, .tile, .item, .step, .note, .panel, .contact-form, .contact-details { transition: color .22s ease, background-color .22s ease, border-color .22s ease, box-shadow .22s ease, transform .22s ease; }
+a:not(.brand):hover { color: var(--blue); }
+.brand:hover { opacity: .82; }
+.nav a:hover, .contact a:hover { transform: translateY(-2px); }
+.btn:hover, .button:hover, .submit-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(0,0,0,.16); }
+.tile:hover, .item:hover, .step:hover, .note:hover { transform: translateY(-5px); box-shadow: 0 12px 26px rgba(20,43,73,.12); border-color: var(--beige); }
+.faq details summary:hover { color: var(--blue); }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--beige); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
 </style>
 </head>
 <body>
