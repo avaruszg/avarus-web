@@ -17,6 +17,17 @@ header{position:sticky;top:0;z-index:10;background:rgba(20,43,73,.98);border-bot
 footer{background:#0e2038;color:#dce2e8;padding:25px 0;font-size:12px}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
 @media(max-width:800px){.contact-grid{grid-template-columns:1fr}.hero:after{inset:0;background:linear-gradient(90deg,#142b49ee,#142b49b8),url("../../images/amruseva-01.jpg") center/cover no-repeat}.hero-inner{padding:76px 0 82px}.grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.split{grid-template-columns:1fr;gap:28px}.section{padding:58px 0}}
 @media(max-width:520px){.contact-form,.contact-details{padding:25px 21px}.field-grid{grid-template-columns:1fr}.wrap{width:min(var(--max),calc(100% - 34px))}.nav{min-height:68px}.brand{font-size:21px;gap:9px}.brand img{width:45px;height:45px}.nav a.contact{padding:7px 10px;font-size:11px}.hero-inner{padding:64px 0 70px}h1{font-size:43px}.hero p{font-size:16px}.grid,.steps{grid-template-columns:1fr}.tile{padding:21px}.panel{padding:27px 23px}.foot{display:block}.foot span{display:block;margin:5px 0}}
+
+/* Consistent interactive feedback across AVARUS SEO pages */
+a, button, .tile, .item, .step, .note, .panel, .contact-form, .contact-details { transition: color .22s ease, background-color .22s ease, border-color .22s ease, box-shadow .22s ease, transform .22s ease; }
+a:not(.brand):hover { color: var(--blue); }
+.brand:hover { opacity: .82; }
+.nav a:hover, .contact a:hover { transform: translateY(-2px); }
+.btn:hover, .button:hover, .submit-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(0,0,0,.16); }
+.tile:hover, .item:hover, .step:hover, .note:hover { transform: translateY(-5px); box-shadow: 0 12px 26px rgba(20,43,73,.12); border-color: var(--beige); }
+.faq details summary:hover { color: var(--blue); }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--beige); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
 </style>
 </head>
 <body>
