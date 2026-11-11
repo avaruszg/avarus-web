@@ -16,9 +16,10 @@ body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.7 Inter,Arial
 a{color:inherit}
 header{background:#fff;border-bottom:1px solid var(--line)}
 .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;text-decoration:none;min-width:0}
-.brand img{display:block;width:230px;max-width:44vw;height:auto;object-fit:contain}
-.back{color:var(--navy);font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap}
+header{background:rgba(20,43,73,.98);border-bottom:1px solid rgba(255,255,255,.14)}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;min-width:0;color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:25px;font-weight:700;letter-spacing:.015em;white-space:nowrap}
+.brand img{display:block;width:60px;height:56px;object-fit:contain;filter:brightness(0) invert(1)}
+.back{position:relative;color:#fff;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap;padding-bottom:5px}
 .service-nav{background:var(--pale);border-bottom:1px solid var(--line)}
 .service-nav .wrap{display:flex;gap:10px 26px;flex-wrap:wrap;padding:11px 0}
 .service-nav a{position:relative;padding:3px 0 6px;font-size:12px;letter-spacing:.04em;text-decoration:none;color:var(--blue);font-weight:700}
@@ -97,13 +98,13 @@ footer{background:#132f46;color:#d9e4ec;padding:24px 0;font-size:13px}
 .motion-in.is-visible{opacity:1;transform:translateY(0)}
 :focus-visible{outline:3px solid #9bb8ce;outline-offset:4px}
 @media(max-width:800px){.two-col{grid-template-columns:1fr;gap:25px}.steps{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr 1fr}.contact-grid{grid-template-columns:1fr}section{padding:56px 0}.hero-inner{padding:65px 0 72px}.hero p{font-size:17px}}
-@media(max-width:520px){.wrap{width:calc(100% - 32px)}.nav{min-height:72px;gap:12px}.brand img{width:155px}.back{font-size:12px}.hero h1{font-size:37px}.hero-inner{padding:60px 0 66px}.grid,.steps,.field-grid{grid-template-columns:1fr}.note,.item,.contact-form,.contact-details{padding:22px}.service-nav .wrap{gap:8px 15px}.service-nav a{font-size:11px}}
+@media(max-width:520px){.wrap{width:calc(100% - 32px)}.nav{min-height:72px;gap:12px}.brand{gap:10px;font-size:20px}.brand img{width:46px;height:44px}.back{font-size:12px}.hero h1{font-size:37px}.hero-inner{padding:60px 0 66px}.grid,.steps,.field-grid{grid-template-columns:1fr}.note,.item,.contact-form,.contact-details{padding:22px}.service-nav .wrap{gap:8px 15px}.service-nav a{font-size:11px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.motion-in{opacity:1;transform:none;transition:none}.item,.step,.note,.button,.submit-btn,.hero:before,.hero:after{transition:none}}
 </style>
 </head>
 <body>
 <header><div class="wrap nav">
-<a class="brand" href="https://avarus.hr/" aria-label="AVARUS početna"><img src="../../images/avarus-logo.png" alt="AVARUS d.o.o."></a>
+<a class="brand" href="https://avarus.hr/" aria-label="AVARUS početna"><img src="../../images/avarus-symbol-original.png" alt="" aria-hidden="true"><span>AVARUS d.o.o.</span></a>
 <a class="back" href="https://avarus.hr/">← Povratak na početnu</a>
 </div></header>
 <nav class="service-nav" aria-label="AVARUS usluge"><div class="wrap">
