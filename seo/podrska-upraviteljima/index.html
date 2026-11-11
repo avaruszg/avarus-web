@@ -70,9 +70,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 @media(max-width:520px){.brand{gap:10px;font-size:21px}.brand-mark{width:48px;height:45px;flex-basis:48px}.nav{gap:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.motion-in{opacity:1!important;transform:none!important;transition:none!important}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
 
+
+.back-to-top{position:fixed;right:22px;bottom:22px;z-index:1000;width:46px;height:46px;display:grid;place-items:center;background:#142b49;color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:50%;box-shadow:0 5px 18px rgba(10,30,50,.22);text-decoration:none;font-size:22px;line-height:1;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s ease,visibility .25s ease,transform .25s ease,background .25s ease}.back-to-top.is-visible{opacity:1;visibility:visible;transform:translateY(0)}.back-to-top:hover{background:#294867;transform:translateY(-3px)}.back-to-top:focus-visible{outline:3px solid #d8c3a5;outline-offset:4px}@media(max-width:520px){.back-to-top{right:15px;bottom:15px;width:42px;height:42px}}@media(prefers-reduced-motion:reduce){.back-to-top{transition:none}}
 </style>
 </head>
-<body>
+<body id="top">
 <header><div class="wrap nav">
 <a class="brand" href="https://avarus.hr/" aria-label="AVARUS početna"><img class="brand-mark" src="../../images/avarus-symbol-original.png" alt="" aria-hidden="true"><span>AVARUS d.o.o.</span></a>
 <a class="back" href="../../index.html">← Povratak na početnu</a>
@@ -125,13 +127,28 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 </div></section>
 
 <section class="contact" id="kontakt"><div class="wrap">
-<div class="kicker" style="color:#c7dced">Kontakt</div><h2>Planirate obnovu ili veći zahvat na zgradi?</h2>
-<p class="lead">Javite nam se kako bismo razgovarali o potrebama vaše zgrade i mogućnostima suradnje.</p>
-<a href="mailto:info.avaruszg@gmail.com">info.avaruszg@gmail.com</a>
-<a href="tel:+385995370006" style="margin-left:10px">+385 99 5370 006</a>
-</div></section>
+<div class="kicker" style="color:#c7dced">Kontakt</div><h2>Razgovarajmo o potrebama vaše zgrade.</h2>
+<p class="lead">Pošaljite nam nekoliko osnovnih informacija, a naš će vam se tim javiti.</p>
+<div class="contact-grid">
+<form class="contact-form" action="https://formsubmit.co/info.avaruszg@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Novi upit – podrška upraviteljima | AVARUS"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" style="display:none">
+<h3>Pošaljite nam upit</h3>
+<div class="field-grid"><div class="field"><label for="ime">Ime i prezime *</label><input id="ime" name="Ime i prezime" autocomplete="name" required></div><div class="field"><label for="email">E-mail adresa *</label><input id="email" name="E-mail" type="email" autocomplete="email" required></div></div>
+<div class="field-grid"><div class="field"><label for="telefon">Broj telefona</label><input id="telefon" name="Telefon" type="tel" autocomplete="tel"></div><div class="field"><label for="vrsta">Vrsta upita</label><select id="vrsta" name="Vrsta upita"><option value="">Odaberite…</option><option>Koordinacija samoobnove</option><option>Konstrukcijska obnova</option><option selected>Podrška upravitelju ili predstavniku suvlasnika</option><option>Investicijsko održavanje</option><option>Upravljanje građevinskim projektom</option><option>Ostalo</option></select></div></div>
+<div class="field"><label for="poruka">Kratki opis upita *</label><textarea id="poruka" name="Poruka" placeholder="Ukratko opišite projekt, lokaciju zgrade ili vrstu podrške koja vam je potrebna…" required></textarea></div>
+<label class="consent"><input type="checkbox" name="Potvrda obavijesti o obradi podataka" value="Potvrđujem" required><span>Potvrđujem da sam upoznat/a da će AVARUS d.o.o. koristiti navedene podatke isključivo radi odgovora na moj upit i daljnje komunikacije vezane uz njega. *</span></label>
+<button class="submit-btn" type="submit">POŠALJITE UPIT</button>
+<p class="contact-note">Polja označena zvjezdicom su obavezna. Slanjem obrasca podaci se prosljeđuju putem servisa FormSubmit radi dostave upita na e-mail AVARUS-a.</p>
+</form>
+<aside class="contact-details"><h3>Želite nas kontaktirati izravno?</h3>
+<div class="contact-item"><span>E-mail</span><a href="mailto:info.avaruszg@gmail.com">info.avaruszg@gmail.com</a></div>
+<div class="contact-item"><span>Telefon</span><a href="tel:+385995370006">+385 99 5370 006</a></div>
+<div class="contact-item"><span>Adresa</span><address>Radnička cesta 1<br>10000 Zagreb</address></div>
+<p class="contact-note">AVARUS d.o.o. · Koordinacija samoobnove i upravljanje projektima.</p>
+</aside>
+</div></div></section>
 </main>
-<footer><div class="wrap foot"><span>© 2026 AVARUS d.o.o. Sva prava pridržana.</span><a href="../../index.html">AVARUS – početna stranica</a></div></footer>
+<footer><div class="wrap foot"><span>© 2026 AVARUS d.o.o. Sva prava pridržana.</span><a href="../../index.html">AVARUS – početna stranica</a></div></footer><a class="back-to-top" href="#top" aria-label="Povratak na vrh stranice" title="Povratak na vrh">↑</a><script>(function(){const b=document.querySelector(".back-to-top");if(!b)return;const update=()=>b.classList.toggle("is-visible",window.scrollY>420);window.addEventListener("scroll",update,{passive:true});update();})();</script>
 
 <script>
 (function(){
