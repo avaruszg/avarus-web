@@ -1,0 +1,151 @@
+<!doctype html><html lang="hr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="AVARUS koordinira projekte investicijskog održavanja višestambenih zgrada, od definiranja potreba i planiranja do povezivanja stručnjaka i praćenja realizacije."><meta name="robots" content="index, follow"><meta name="theme-color" content="#173b59"><title>Investicijsko održavanje zgrada | AVARUS</title><style>
+:root{--navy:#142b49;--blue:#294867;--blue2:#1d4b70;--ink:#28384a;--muted:#66717c;--pale:#f1ece4;--line:#e4dbcf;--cream:#faf9f6;--white:#fff;--max:1100px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.7 Inter,Arial,Helvetica,sans-serif}
+.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
+a{color:inherit}
+header{background:#fff;border-bottom:1px solid var(--line)}
+.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+header{background:rgba(20,43,73,.98);border-bottom:1px solid rgba(255,255,255,.14)}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;min-width:0;color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:25px;font-weight:700;letter-spacing:.015em;white-space:nowrap}
+.brand img{display:block;width:60px;height:56px;object-fit:contain;filter:brightness(0) invert(1)}
+.back{position:relative;color:#fff;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap;padding-bottom:5px}
+.service-nav{background:var(--pale);border-bottom:1px solid var(--line)}
+.service-nav .wrap{display:flex;gap:10px 26px;flex-wrap:wrap;padding:11px 0}
+.service-nav a{position:relative;padding:3px 0 6px;font-size:12px;letter-spacing:.04em;text-decoration:none;color:var(--blue);font-weight:700}
+.service-nav a:after,.back:after,.text-link:after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:#4b86b7;transform:scaleX(0);transform-origin:left;transition:transform .28s ease}
+.service-nav a:hover:after,.service-nav a:focus-visible:after,.back:hover:after,.back:focus-visible:after,.text-link:hover:after{transform:scaleX(1)}
+.service-nav a[aria-current=page]{color:var(--navy)}
+.service-nav a[aria-current=page]:after{transform:scaleX(1);background:var(--navy)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#102f49,#1d4b70 65%,#3f78a7);color:#fff}
+.hero:before,.hero:after{content:"";position:absolute;z-index:0;border:1px solid rgba(255,255,255,.16);border-radius:50%;pointer-events:none;transition:transform 1s ease}
+.hero:before{width:410px;height:410px;right:-120px;top:-180px}
+.hero:after{width:270px;height:270px;right:45px;top:8px}
+.hero:hover:before{transform:translate(-12px,14px) scale(1.03)}
+.hero:hover:after{transform:translate(8px,-8px) scale(.97)}
+.hero-inner{position:relative;z-index:1;padding:86px 0 92px;max-width:850px}
+.eyebrow,.kicker{text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:700}
+.eyebrow{color:#c7dced}
+.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(38px,5.8vw,64px);line-height:1.08;letter-spacing:-.035em;margin:18px 0;font-weight:400}
+.hero p{max-width:760px;font-size:19px;color:#e5eff6;margin:0 0 28px}
+.button{position:relative;display:inline-block;padding:13px 21px;background:#fff;color:var(--navy);font-weight:700;text-decoration:none;border-radius:3px;transition:transform .25s ease,background .25s ease,box-shadow .25s ease}
+.button:hover{transform:translateY(-3px);background:#eaf2f8;box-shadow:0 9px 22px #061b2c35}
+section{padding:72px 0}
+.kicker{color:var(--blue)}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(29px,4vw,41px);line-height:1.15;letter-spacing:-.025em;color:var(--navy);margin:12px 0 17px;font-weight:400}
+h3{font-family:Georgia,"Times New Roman",serif;color:var(--navy);font-weight:400}
+.lead{font-size:18px;color:var(--muted);max-width:820px;margin:0}
+.two-col{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.note{padding:30px;background:var(--pale);border-left:4px solid var(--blue);transition:transform .3s ease,box-shadow .3s ease}
+.note strong{display:block;color:var(--navy);font-size:20px;margin-bottom:8px}
+.note p{margin:0;color:var(--muted)}
+.note:hover{transform:translateY(-4px);box-shadow:0 12px 26px #173b5914}
+.soft{background:var(--pale)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;margin-top:32px}
+.item{background:#fff;border:1px solid var(--line);padding:25px;transition:transform .32s ease,box-shadow .32s ease,border-color .32s ease}
+.item h3{font-size:20px;margin:0 0 8px}
+.item p{font-size:15px;color:var(--muted);margin:0}
+.item:hover{transform:translateY(-6px);box-shadow:0 14px 28px #173b5917;border-color:#9bb8ce}
+.steps{counter-reset:step;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:32px}
+.step{border-top:3px solid var(--blue);padding:20px 18px;background:#fff;transition:transform .32s ease,box-shadow .32s ease}
+.step:before{counter-increment:step;content:"0" counter(step);font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--blue)}
+.step h3{font-size:19px;margin:10px 0 6px}
+.step p{color:var(--muted);font-size:15px;margin:0}
+.step:hover{transform:translateY(-5px);box-shadow:0 12px 24px #173b5912}
+.faq{max-width:850px;margin-top:28px}
+.faq details{padding:18px 0;border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;color:var(--navy);font-weight:700;transition:color .2s ease}
+.faq summary:hover{color:#4b86b7}
+.faq p{color:var(--muted);margin:10px 0 0}
+.contact{background:var(--navy);color:#fff}
+.contact h2{color:#fff}
+.contact .lead{color:#dce8f0}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(250px,.8fr);gap:22px;margin-top:30px;align-items:stretch}
+.contact-form{background:#fff;color:var(--ink);padding:30px;border:1px solid var(--line)}
+.contact-form h3,.contact-details h3{font-size:27px;margin:0 0 20px}
+.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.field label{font-size:13px;font-weight:700;color:var(--navy)}
+.field input,.field select,.field textarea{width:100%;font:inherit;font-size:15px;padding:12px;border:1px solid #d7dce1;background:#fff;color:var(--ink);border-radius:0}
+.field textarea{min-height:115px;resize:vertical}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:12px;line-height:1.55;color:var(--muted);margin:12px 0 20px}
+.consent input{margin-top:4px;accent-color:var(--navy)}
+.submit-btn{border:0;cursor:pointer;font:700 14px Arial,sans-serif;padding:15px 22px;background:#d8c3a5;color:var(--navy);transition:transform .25s ease,box-shadow .25s ease}
+.submit-btn:hover{transform:translateY(-3px);box-shadow:0 9px 22px #061b2c25}
+.contact-details{padding:30px;background:#203b5c;border:1px solid #ffffff25}
+.contact-details h3{color:#fff}
+.contact-details p{color:#e1e6eb;font-size:14px}
+.contact-item{padding:15px 0;border-bottom:1px solid #ffffff25}
+.contact-item:last-child{border:0}
+.contact-item span{display:block;color:#c7dced;font-size:11px;text-transform:uppercase;letter-spacing:.13em;font-weight:700}
+.contact-item a,.contact-item address{color:#fff;text-decoration:none;font-style:normal;font-size:16px;overflow-wrap:anywhere}
+.contact-item a:hover{color:#c7dced;text-decoration:underline;text-underline-offset:4px}
+.contact-note{font-size:11px!important;color:#c8d2dc!important;margin-top:20px}
+footer{background:#132f46;color:#d9e4ec;padding:24px 0;font-size:13px}
+.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.foot a{position:relative;color:#fff;text-decoration:none;padding-bottom:4px}
+.motion-in{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.motion-in.is-visible{opacity:1;transform:translateY(0)}
+:focus-visible{outline:3px solid #9bb8ce;outline-offset:4px}
+@media(max-width:800px){.two-col{grid-template-columns:1fr;gap:25px}.steps{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr 1fr}.contact-grid{grid-template-columns:1fr}section{padding:56px 0}.hero-inner{padding:65px 0 72px}.hero p{font-size:17px}}
+@media(max-width:520px){.wrap{width:calc(100% - 32px)}.nav{min-height:72px;gap:12px}.brand{gap:10px;font-size:20px}.brand img{width:46px;height:44px}.back{font-size:12px}.hero h1{font-size:37px}.hero-inner{padding:60px 0 66px}.grid,.steps,.field-grid{grid-template-columns:1fr}.note,.item,.contact-form,.contact-details{padding:22px}.service-nav .wrap{gap:8px 15px}.service-nav a{font-size:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.motion-in{opacity:1;transform:none;transition:none}.item,.step,.note,.button,.submit-btn,.hero:before,.hero:after{transition:none}}
+
+/* AVARUS hover underline: visible on mouse hover and keyboard focus */
+.service-nav a,.back,.foot a{position:relative;text-decoration:none}
+.service-nav a::after,.back::after,.foot a::after{
+ content:"";
+ position:absolute;
+ left:0;
+ bottom:0;
+ width:100%;
+ height:2px;
+ background:#5b9bd0;
+ transform:scaleX(0);
+ transform-origin:left center;
+ transition:transform .28s ease;
+}
+.service-nav a:hover::after,.service-nav a:focus-visible::after,
+.back:hover::after,.back:focus-visible::after,
+.foot a:hover::after,.foot a:focus-visible::after{transform:scaleX(1)}
+.service-nav a[aria-current="page"]::after{transform:scaleX(1);background:var(--navy)}
+@media(hover:none){
+ .service-nav a:active::after,.back:active::after,.foot a:active::after{transform:scaleX(1)}
+}
+
+
+.back-to-top{position:fixed;right:22px;bottom:22px;z-index:1000;width:46px;height:46px;display:grid;place-items:center;background:#142b49;color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:50%;box-shadow:0 5px 18px rgba(10,30,50,.22);text-decoration:none;font-size:22px;line-height:1;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s ease,visibility .25s ease,transform .25s ease,background .25s ease}.back-to-top.is-visible{opacity:1;visibility:visible;transform:translateY(0)}.back-to-top:hover{background:#294867;transform:translateY(-3px)}.back-to-top:focus-visible{outline:3px solid #d8c3a5;outline-offset:4px}@media(max-width:520px){.back-to-top{right:15px;bottom:15px;width:42px;height:42px}}@media(prefers-reduced-motion:reduce){.back-to-top{transition:none}}
+
+/* Match the "Povratak na početnu" link color to SEO pages 2 and 3 */
+.back{color:var(--navy)}
+.back:hover{color:var(--blue)}
+
+
+.service-nav .wrap{gap:8px 18px}
+.service-nav a{font-size:11px}
+.contact-grid{grid-template-columns:minmax(0,1.4fr) minmax(250px,.8fr)}
+@media(max-width:760px){.contact-grid{grid-template-columns:1fr}}
+</style></head><body id="top">
+<header><div class="wrap nav"><a class="brand" href="https://avarus.hr/" aria-label="AVARUS početna"><img src="../../images/avarus-symbol-original.png" alt="" aria-hidden="true"><span>AVARUS d.o.o.</span></a><a class="back" href="https://avarus.hr/">← Povratak na početnu</a></div></header>
+<nav class="service-nav" aria-label="AVARUS usluge"><div class="wrap"><a href="../koordinacija-samoobnove/index.html">Koordinacija samoobnove</a><a href="../konstrukcijska-obnova/index.html">Konstrukcijska obnova</a><a href="../podrska-upraviteljima/index.html">Podrška upraviteljima</a><a href="../podrska-predstavnicima-suvlasnika/index.html">Podrška predstavnicima suvlasnika</a><a href="../investicijsko-odrzavanje-zgrada/index.html" aria-current="page">Investicijsko održavanje</a><a href="../upravljanje-gradevinskim-projektima/index.html">Upravljanje projektima</a><a href="../opremanje-i-realizacija/index.html">Opremanje i realizacija</a></div></nav>
+<main>
+<section class="hero"><div class="wrap hero-inner"><div class="eyebrow">AVARUS d.o.o. · Cijela Hrvatska</div><h1>Investicijsko održavanje zgrada</h1><p>Veći zahvati održavanja zahtijevaju dobru pripremu, realno planiranje i koordinaciju više sudionika. AVARUS pruža projektnu i organizacijsku podršku kako bi se potrebe zgrade pretvorile u jasno strukturiran proces.</p><a class="button" href="#kontakt">Razgovarajmo o vašem projektu</a></div></section>
+<section><div class="wrap two-col"><div><div class="kicker">AVARUS · Koordinacija i podrška</div><h2>Održavanje zgrade uz jasan plan i koordinaciju.</h2><p class="lead">Investicijsko održavanje obuhvaća planske zahvate kojima se čuva, obnavlja ili unapređuje vrijednost i funkcionalnost zgrade. Odabir prioriteta, priprema zahvata i usklađivanje stručnjaka važni su za kvalitetnu organizaciju.</p><p>AVARUS pomaže definirati opseg projekta, organizirati potrebne sudionike, koordinirati komunikaciju i pratiti dogovorene korake. Tehnička rješenja i radove izrađuju odnosno izvode odgovarajući ovlašteni stručnjaci i ugovoreni izvođači.</p></div><aside class="note"><strong>Jedna kontaktna točka za koordinaciju.</strong><p>Povezujemo potrebe klijenata s odgovarajućim stručnim partnerima te pomažemo održati pregled nad zadacima, rokovima i komunikacijom.</p></aside></div></section>
+<section class="soft"><div class="wrap"><div class="kicker">Područja podrške</div><h2>Kako AVARUS može pomoći?</h2><div class="grid"><article class="item"><h3>Procjena potreba i prioriteta</h3><p>Organizacijska podrška u sagledavanju potreba zgrade i definiranju redoslijeda zahvata.</p></article><article class="item"><h3>Planiranje zahvata</h3><p>Razrada koraka, rokova, sudionika i komunikacije potrebne za pripremu projekta.</p></article><article class="item"><h3>Obnova zajedničkih dijelova</h3><p>Koordinacija aktivnosti vezanih uz krovove, pročelja, stubišta, instalacije i druge zajedničke dijelove.</p></article><article class="item"><h3>Tehnički sustavi zgrade</h3><p>Podrška projektima koji uključuju dizala, grijanje, hlađenje i druge specijalizirane sustave.</p></article><article class="item"><h3>Suradnja sa stručnjacima</h3><p>Povezivanje s projektantima, izvođačima, nadzorom, dobavljačima i partnerima.</p></article><article class="item"><h3>Praćenje realizacije</h3><p>Praćenje dogovorenih aktivnosti, rokova, otvorenih pitanja i komunikacije.</p></article></div></div></section>
+<section><div class="wrap"><div class="kicker">Način rada</div><h2>Od prvog razgovora do realizacije</h2><div class="steps"><article class="step"><h3>Sagledavanje stanja</h3><p>Upoznajemo potrebe zgrade, dokumentaciju i prioritete suvlasnika.</p></article><article class="step"><h3>Plan zahvata</h3><p>Strukturiramo opseg, sudionike, rokove i korake pripreme.</p></article><article class="step"><h3>Usklađivanje</h3><p>Koordiniramo komunikaciju i suradnju uključenih stručnjaka i izvođača.</p></article><article class="step"><h3>Praćenje provedbe</h3><p>Pratimo dogovorene aktivnosti i tijek projekta.</p></article></div></div></section>
+<section class="soft"><div class="wrap two-col"><div><div class="kicker">Za koga je usluga</div><h2>Podrška prilagođena vašem projektu</h2><p>Za upravitelje zgrada, predstavnike suvlasnika, suvlasnike i investitore koji pripremaju veće zahvate održavanja ili unapređenja nekretnine.</p><p>AVARUS pruža usluge na području cijele Republike Hrvatske, uz model suradnje prilagođen potrebama i opsegu pojedinog projekta.</p></div><aside class="note"><strong>Koordinacija i upravljanje. Uz prave stručnjake.</strong><p>AVARUS nije izvođač građevinskih radova niti zamjena za ovlaštene projektante ili nadzorne inženjere. Naša je uloga organizacija, povezivanje i koordinacija projektnog procesa uz mrežu stručnih partnera.</p></aside></div></section>
+<section><div class="wrap"><div class="kicker">Česta pitanja</div><h2>Što je dobro znati?</h2><div class="faq"><details><summary>Je li investicijsko održavanje isto što i redovno održavanje?</summary><p>Ne nužno. Investicijsko održavanje obično obuhvaća veće, planske zahvate na zajedničkim dijelovima ili sustavima zgrade.</p></details><details><summary>Izvodi li AVARUS radove?</summary><p>Ne. AVARUS koordinira projekt i suradnju stručnih partnera. Radove izvode ugovoreni izvođači, a stručne poslove obavljaju ovlaštene osobe.</p></details><details><summary>Može li AVARUS pomoći pri određivanju prioriteta?</summary><p>Možemo pružiti organizacijsku podršku u strukturiranju potreba i pripremi plana, uz uključivanje stručnjaka za tehničke procjene.</p></details><details><summary>Radi li AVARUS izvan Zagreba?</summary><p>Da. Usluge pružamo na području cijele Republike Hrvatske.</p></details></div></div></section>
+<section class="contact" id="kontakt"><div class="wrap"><div class="kicker" style="color:#c7dced">Kontakt</div><h2>Razgovarajmo o planovima održavanja vaše zgrade.</h2><p class="lead">Pošaljite nam nekoliko osnovnih informacija, a naš će vam se tim javiti.</p>
+<div class="contact-grid"><form class="contact-form" action="https://formsubmit.co/info.avaruszg@gmail.com" method="POST"><input type="hidden" name="_subject" value="Novi upit – investicijsko održavanje zgrada | AVARUS"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" style="display:none"><h3>Pošaljite nam upit</h3>
+<div class="field-grid"><div class="field"><label for="ime">Ime i prezime *</label><input id="ime" name="Ime i prezime" autocomplete="name" required></div><div class="field"><label for="email">E-mail adresa *</label><input id="email" name="E-mail" type="email" autocomplete="email" required></div></div>
+<div class="field-grid"><div class="field"><label for="telefon">Broj telefona</label><input id="telefon" name="Telefon" type="tel" autocomplete="tel"></div><div class="field"><label for="vrsta">Vrsta upita</label><select id="vrsta" name="Vrsta upita"><option value="">Odaberite…</option><option>Koordinacija samoobnove</option><option>Konstrukcijska obnova</option><option>Podrška upravitelju</option><option>Podrška predstavnicima suvlasnika</option><option>Investicijsko održavanje zgrada</option><option>Upravljanje građevinskim projektom</option><option>Opremanje i realizacija</option><option>Ostalo</option></select></div></div>
+<div class="field"><label for="poruka">Kratki opis upita *</label><textarea id="poruka" name="Poruka" placeholder="Ukratko opišite projekt, lokaciju ili vrstu podrške koja vam je potrebna…" required></textarea></div>
+<label class="consent"><input type="checkbox" name="Potvrda obavijesti o obradi podataka" value="Potvrđujem" required><span>Potvrđujem da sam upoznat/a da će AVARUS d.o.o. koristiti navedene podatke isključivo radi odgovora na moj upit i daljnje komunikacije vezane uz njega. *</span></label>
+<button class="submit-btn" type="submit">POŠALJITE UPIT</button><p class="contact-note">Polja označena zvjezdicom su obavezna. Slanjem obrasca podaci se prosljeđuju putem servisa FormSubmit radi dostave upita na e-mail AVARUS-a.</p></form>
+<aside class="contact-details"><h3>Želite nas kontaktirati izravno?</h3><div class="contact-item"><span>E-mail</span><a href="mailto:info.avaruszg@gmail.com">info.avaruszg@gmail.com</a></div><div class="contact-item"><span>Telefon</span><a href="tel:+385995370006">+385 99 5370 006</a></div><div class="contact-item"><span>Adresa</span><address>Radnička cesta 1<br>10000 Zagreb</address></div><p class="contact-note">AVARUS d.o.o. · Koordinacija i upravljanje projektima.</p></aside></div></div></section>
+</main><footer><div class="wrap foot"><span>© 2026 AVARUS d.o.o. Sva prava pridržana.</span><a href="https://avarus.hr/">AVARUS – početna stranica</a></div></footer>
+<a class="back-to-top" href="#top" aria-label="Povratak na vrh stranice" title="Povratak na vrh">↑</a>
+<script>(function(){const b=document.querySelector(".back-to-top");if(!b)return;const update=()=>b.classList.toggle("is-visible",window.scrollY>420);window.addEventListener("scroll",update,{passive:true});update();})();</script>
+<script>(function(){const nodes=document.querySelectorAll('.hero-inner > *,main section .kicker,main section h2,main section .lead,main section .grid > *,main section .steps > *,main section .two-col > *,main section .faq details,main section .contact-grid > *');if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;if(!('IntersectionObserver' in window))return;nodes.forEach((el,i)=>{el.classList.add('motion-in');if(el.matches('.grid > *, .steps > *'))el.style.transitionDelay=(i%6)*65+'ms';});const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}}),{threshold:.12});nodes.forEach(el=>observer.observe(el));})();</script>
+</body></html>
