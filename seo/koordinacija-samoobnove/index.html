@@ -123,9 +123,11 @@ footer{background:#132f46;color:#d9e4ec;padding:24px 0;font-size:13px}
  .service-nav a:active::after,.back:active::after,.foot a:active::after{transform:scaleX(1)}
 }
 
+
+.back-to-top{position:fixed;right:22px;bottom:22px;z-index:1000;width:46px;height:46px;display:grid;place-items:center;background:#142b49;color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:50%;box-shadow:0 5px 18px rgba(10,30,50,.22);text-decoration:none;font-size:22px;line-height:1;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s ease,visibility .25s ease,transform .25s ease,background .25s ease}.back-to-top.is-visible{opacity:1;visibility:visible;transform:translateY(0)}.back-to-top:hover{background:#294867;transform:translateY(-3px)}.back-to-top:focus-visible{outline:3px solid #d8c3a5;outline-offset:4px}@media(max-width:520px){.back-to-top{right:15px;bottom:15px;width:42px;height:42px}}@media(prefers-reduced-motion:reduce){.back-to-top{transition:none}}
 </style>
 </head>
-<body>
+<body id="top">
 <header><div class="wrap nav">
 <a class="brand" href="https://avarus.hr/" aria-label="AVARUS početna"><img src="../../images/avarus-symbol-original.png" alt="" aria-hidden="true"><span>AVARUS d.o.o.</span></a>
 <a class="back" href="https://avarus.hr/">← Povratak na početnu</a>
@@ -200,7 +202,7 @@ footer{background:#132f46;color:#d9e4ec;padding:24px 0;font-size:13px}
 </aside>
 </div></div></section>
 </main>
-<footer><div class="wrap foot"><span>© 2026 AVARUS d.o.o. Sva prava pridržana.</span><a href="https://avarus.hr/">AVARUS – početna stranica</a></div></footer>
+<footer><div class="wrap foot"><span>© 2026 AVARUS d.o.o. Sva prava pridržana.</span><a href="https://avarus.hr/">AVARUS – početna stranica</a></div></footer><a class="back-to-top" href="#top" aria-label="Povratak na vrh stranice" title="Povratak na vrh">↑</a><script>(function(){const b=document.querySelector('.back-to-top');if(!b)return;const update=()=>b.classList.toggle('is-visible',window.scrollY>420);window.addEventListener('scroll',update,{passive:true});update();})();</script>
 <script>
 (function(){
  const nodes=document.querySelectorAll('.hero-inner > *,section .kicker,section h2,section .lead,.two-col > *,section .item,section .step,.faq details,.contact-grid > *,footer .wrap > *');
